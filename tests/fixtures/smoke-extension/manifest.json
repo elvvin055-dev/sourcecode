@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Nova unpacked-extension API fixture",
+  "version": "1.0.0",
+  "description": "Temporary, local integration-test extension; not a product extension.",
+  "permissions": [],
+  "content_scripts": [{
+    "matches": ["https://*/*"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+  }]
+}

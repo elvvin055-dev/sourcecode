@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none';">
+  <title>Nova Browser</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="toolbar">
+      <div class="traffic-space" aria-hidden="true"></div>
+      <div class="nav-controls">
+        <button id="back" class="icon-button" title="Back (⌘[)" aria-label="Back">‹</button>
+        <button id="forward" class="icon-button" title="Forward (⌘])" aria-label="Forward">›</button>
+        <button id="reload" class="icon-button" title="Reload" aria-label="Reload">↻</button>
+      </div>
+      <div class="address-wrap"><span class="lock" id="security-icon">◈</span><input id="address" aria-label="Search or enter website" placeholder="Search or enter a website address" autocomplete="off" spellcheck="false"><button id="go" class="go-button" title="Go">↵</button><div id="suggestions" class="suggestions hidden"></div></div>
+      <button id="bookmark-current" class="icon-button star-button" title="Bookmark this page" aria-label="Bookmark">☆</button>
+      <button id="split-toggle" class="icon-button" title="Split view" aria-label="Split view">◫</button>
+      <button id="pip-toggle" class="icon-button" title="Picture in Picture" aria-label="Picture in Picture">▣</button>
+      <button id="translate-toggle" class="icon-button" title="Translate page with AI" aria-label="Translate page">文</button>
+      <button id="private" class="icon-button" title="New private window" aria-label="New private window">◐</button>
+      <button id="theme-toggle" class="icon-button" title="Toggle theme" aria-label="Toggle theme">◑</button>
+      <button id="menu-toggle" class="icon-button" title="Tools" aria-label="Open tools">•••</button>
+    </header>
+    <div class="workspace">
+      <aside class="rail" id="rail">
+        <div class="brand"><div class="brand-mark">N</div><span>Nova</span></div>
+        <button id="new-tab" class="rail-action primary" title="New tab">＋ <span>New tab</span></button>
+        <div id="vertical-tabs" class="vertical-tabs"></div>
+        <div class="rail-label">LIBRARY</div>
+        <button class="rail-action" data-panel="bookmarks">☆ <span>Bookmarks</span></button>
+        <button class="rail-action" data-panel="history">◷ <span>History</span></button>
+        <button class="rail-action" data-panel="downloads">↓ <span>Downloads</span></button>
+        <button class="rail-action" data-panel="passwords">⌑ <span>Passwords</span></button>
+        <button class="rail-action" data-panel="extensions">⊞ <span>Extensions</span></button>
+        <button class="rail-action" data-panel="workspaces">◫ <span>Workspaces</span></button>
+        <button class="rail-action" data-panel="privacy">◉ <span>Privacy & permissions</span></button>
+        <div class="rail-spacer"></div>
+        <button class="rail-action" data-panel="reader">▤ <span>Reader</span></button>
+        <button class="rail-action" data-panel="assistant">✳ <span>AI assistant</span></button>
+        <div class="rail-footer"><span class="status-dot"></span><span id="privacy-status">Private by design</span></div>
+      </aside>
+      <main class="main-area">
+        <div class="tabbar-wrap"><div class="tabbar" id="tabbar" role="tablist"></div><button id="add-tab" class="add-tab" title="New tab">＋</button></div>
+        <div class="content-area">
+          <div id="webview-host" class="webview-host"></div>
+          <section id="home" class="home-screen">
+            <div class="home-orb"><span>N</span></div><p class="eyebrow">A calmer way to browse</p><h1>Good browsing,<br><em>without the noise.</em></h1>
+            <p class="home-copy">Search the web, pick up where you left off, and keep your attention on what matters.</p>
+            <div class="quick-links" id="quick-links"><button data-url="https://www.google.com">Google</button><button data-url="https://www.youtube.com">YouTube</button><button data-url="https://www.wikipedia.org">Wikipedia</button></div>
+            <div class="home-bottom"><span>⌘ L to search</span><span>•</span><span>Private mode available anytime</span></div>
+          </section>
+          <section id="panel" class="panel hidden" aria-live="polite"></section>
+        </div>
+      </main>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="url-utils.js"></script><script src="renderer.js"></script>
+</body></html>

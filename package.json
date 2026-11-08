@@ -1,0 +1,76 @@
+{
+  "name": "nova-browser",
+  "version": "0.1.0",
+  "description": "A privacy-conscious Chromium browser foundation for Apple Silicon Macs",
+  "main": "src/main.js",
+  "author": "Nova Browser contributors",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "package:mac:arm64": "electron-builder --mac dmg --arm64",
+    "package:mac:universal": "electron-builder --mac dmg --universal",
+    "lint:syntax": "node scripts/check-syntax.js",
+    "test:integration": "node scripts/electron-smoke.js"
+  },
+  "devDependencies": {
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0",
+    "playwright": "^1.65.0"
+  },
+  "build": {
+    "appId": "com.novabrowser.app",
+    "productName": "Nova Browser",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "assets/nova.png",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.productivity",
+      "icon": "assets/nova.png",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "identity": "-"
+    },
+    "dmg": {
+      "title": "Nova Browser ${version}",
+      "contents": [
+        {
+          "x": 150,
+          "y": 180
+        },
+        {
+          "x": 450,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "overrides": {
+    "minimatch@^10.0.0": "11.0.1",
+    "minimatch@^9.0.0": "11.0.1",
+    "@electron/universal": {
+      "minimatch": "11.0.1"
+    }
+  },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "^2.20.3"
+  }
+}

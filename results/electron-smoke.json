@@ -1,0 +1,186 @@
+{
+  "ranAt": "2026-11-08T17:13:53.913Z",
+  "platform": "linux-x64",
+  "results": [
+    {
+      "name": "Electron application starts",
+      "status": "PASS",
+      "detail": "Linux x86_64/Xvfb only"
+    },
+    {
+      "name": "Local browser UI / CSP boot",
+      "status": "PASS",
+      "detail": "Good browsing, without the noise."
+    },
+    {
+      "name": "Real Chromium webview navigation",
+      "status": "PASS",
+      "detail": "Nova local test"
+    },
+    {
+      "name": "Ad/tracker blocker initialized",
+      "status": "PASS",
+      "detail": "engine=true; secureStorage=false; backend=basic_text"
+    },
+    {
+      "name": "OS-backed secret storage on this host",
+      "status": "NOT RUN",
+      "detail": "backend=basic_text; Linux basic_text cannot validate Apple Keychain"
+    },
+    {
+      "name": "Password vault fails closed without protected storage",
+      "status": "PASS",
+      "detail": "No test credential was persisted on basic_text backend"
+    },
+    {
+      "name": "Bookmark create/list",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "History record/list",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Reader text extraction",
+      "status": "PASS",
+      "detail": "Local test page\nDownload test"
+    },
+    {
+      "name": "Tab creation/switch",
+      "status": "PASS",
+      "detail": "2 tabs"
+    },
+    {
+      "name": "Split view layout",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Vertical tab layout",
+      "status": "PASS",
+      "detail": "rail vertical-mode"
+    },
+    {
+      "name": "Workspace create/switch",
+      "status": "PASS",
+      "detail": "Research workspace active"
+    },
+    {
+      "name": "Tab group create/assign",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Download request/manager",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Google",
+      "status": "PASS",
+      "detail": "complete; title=Google"
+    },
+    {
+      "name": "YouTube",
+      "status": "PASS",
+      "detail": "complete; title=lofi hip hop radio 📚 beats to relax/study to - YouTube"
+    },
+    {
+      "name": "Gmail account sign-in entry",
+      "status": "PASS",
+      "detail": "complete; title=Sign in - Google Accounts"
+    },
+    {
+      "name": "Instagram landing page",
+      "status": "PASS",
+      "detail": "complete; title=Instagram"
+    },
+    {
+      "name": "Facebook landing page",
+      "status": "PASS",
+      "detail": "complete; title=Facebook"
+    },
+    {
+      "name": "HTTPS / JavaScript-heavy site",
+      "status": "PASS",
+      "detail": "complete; title=React"
+    },
+    {
+      "name": "Private window creation/status",
+      "status": "PASS",
+      "detail": "before=4, after=6, foundPrivate=true, urls=file:///home/user/NovaBrowser/src/index.html?private=0 | https://react.dev/ | about:blank | about:blank | file:///home/user/NovaBrowser/src/index.html?private=1 | about:blank"
+    },
+    {
+      "name": "Private browsing history isolation",
+      "status": "PASS",
+      "detail": "private navigation did not modify persistent history"
+    },
+    {
+      "name": "Sample video element playback",
+      "status": "PASS",
+      "detail": "readyState=4; mediaError=0"
+    },
+    {
+      "name": "Session snapshot persisted",
+      "status": "PASS",
+      "detail": "3 tabs"
+    },
+    {
+      "name": "Session data available on restart",
+      "status": "PASS",
+      "detail": "1 saved tabs; active=http://127.0.0.1:44431/"
+    },
+    {
+      "name": "Session restore after clean restart",
+      "status": "PASS",
+      "detail": "http://127.0.0.1:44431/"
+    },
+    {
+      "name": "Crash recovery after forced main-process termination",
+      "status": "PASS",
+      "detail": "http://127.0.0.1:44431/"
+    },
+    {
+      "name": "Unpacked extension API load",
+      "status": "PASS",
+      "detail": "{\"status\":\"PASS\",\"id\":\"andjgchcokbmmmcehnilidnpfhlbipia\",\"name\":\"Nova unpacked-extension API fixture\",\"version\":\"1.0.0\"}"
+    },
+    {
+      "name": "Chrome Web Store / CRX installation",
+      "status": "NOT RUN",
+      "detail": "Not supported by Electron; only unpacked extensions using the available Electron API subset can load."
+    },
+    {
+      "name": "Extension manager folder-picker UI",
+      "status": "NOT RUN",
+      "detail": "Native open-folder dialog was not driven in this automated smoke run."
+    },
+    {
+      "name": "AI page translation / assistant request",
+      "status": "NOT RUN",
+      "detail": "No protected provider key was configured; Linux OS secret backend is basic_text."
+    },
+    {
+      "name": "Screenshot save dialog",
+      "status": "NOT RUN",
+      "detail": "Native save dialog was not automated; capture UI path was not exercised."
+    },
+    {
+      "name": "Picture-in-Picture",
+      "status": "NOT RUN",
+      "detail": "Trusted media activation / OS PiP window was not automated."
+    },
+    {
+      "name": "Audio output",
+      "status": "NOT RUN",
+      "detail": "No audio device/output loopback was available in the headless Xvfb run."
+    },
+    {
+      "name": "M1 GPU / hardware decode / ARM64",
+      "status": "NOT RUN",
+      "detail": "Linux x86_64 environment is not Apple Silicon or macOS"
+    }
+  ]
+}
